@@ -22,7 +22,7 @@ class Config {
     const KEY_NAVBAR_MAIN_BG = 'navbar_main_bg';
     const KEY_NAVBAR_CONTEXTUAL_STYLE = 'navbar_contextual_style';
     const KEY_NAVBAR_CONTEXTUAL_BG = 'navbar_contextual_bg';
-    const KEY_SHOW_EXIF_BUTTON = "show_exif_button";
+    const KEY_SHOW_EXIF_BUTTON = 'show_exif_button';
 
     const KEY_SLICK_ENABLED = 'slick_enabled';
     const KEY_SLICK_LAZYLOAD = 'slick_lazyload';
