@@ -54,6 +54,13 @@ class ThemeController {
         if (array_key_exists('bootstrap_darkroom_navbar_contextual_bg', $conf) && !empty($conf['bootstrap_darkroom_navbar_contextual_bg'])) {
             $this->config->navbar_contextual_bg = $conf['bootstrap_darkroom_navbar_contextual_bg'];
         }
+        if (array_key_exists('bootstrap_darkroom_show_exif_button', $conf) && !empty($conf['bootstrap_darkroom_show_exif_button'])) {
+            $this->config->show_exif_button = $conf['bootstrap_darkroom_show_exif_button'];
+        } else {
+            // Fallback
+            $this->config->show_exif_button = true;
+        }
+
 
         $template->assign('theme_config', $this->config);
     }

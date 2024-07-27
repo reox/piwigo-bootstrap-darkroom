@@ -276,6 +276,7 @@
               </div>
             </div>
           </div>
+          {if $theme_config->show_exif_button}
           <button id="show_exif_data" class="btn btn-primary btn-raised mt-1" style="text-transform: none;"><i class="fas fa-info mr-1"></i> {'Show EXIF data'|@translate}</button>
 {footer_script require='jquery'}
 $('#show_exif_data').on('click', function() {
@@ -300,6 +301,7 @@ $('#show_exif_data').on('click', function() {
 {/foreach}
 {/foreach}
           </div>
+          {/if}
         </div>
       </div>
 {/if}
