@@ -22,6 +22,7 @@ class Config {
     const KEY_NAVBAR_MAIN_BG = 'navbar_main_bg';
     const KEY_NAVBAR_CONTEXTUAL_STYLE = 'navbar_contextual_style';
     const KEY_NAVBAR_CONTEXTUAL_BG = 'navbar_contextual_bg';
+    const KEY_SHOW_EXIF_BUTTON = "show_exif_button";
 
     const KEY_SLICK_ENABLED = 'slick_enabled';
     const KEY_SLICK_LAZYLOAD = 'slick_lazyload';
@@ -68,6 +69,7 @@ class Config {
         self::KEY_NAVBAR_MAIN_BG => 'bg-dark',
         self::KEY_NAVBAR_CONTEXTUAL_STYLE => 'navbar-dark',
         self::KEY_NAVBAR_CONTEXTUAL_BG => 'bg-primary',
+        self::KEY_SHOW_EXIF_BUTTON => true,
         self::KEY_SLICK_ENABLED => true,
         self::KEY_SLICK_LAZYLOAD => 'ondemand',
         self::KEY_SLICK_INFINITE => false,
@@ -111,6 +113,7 @@ class Config {
         self::KEY_NAVBAR_MAIN_BG => self::TYPE_STRING,
         self::KEY_NAVBAR_CONTEXTUAL_STYLE => self::TYPE_STRING,
         self::KEY_NAVBAR_CONTEXTUAL_BG => self::TYPE_STRING,
+        self::KEY_SHOW_EXIF_BUTTON => self::TYPE_BOOL,
         self::KEY_SLICK_ENABLED => self::TYPE_BOOL,
         self::KEY_SLICK_LAZYLOAD => self::TYPE_STRING,
         self::KEY_SLICK_INFINITE => self::TYPE_BOOL,

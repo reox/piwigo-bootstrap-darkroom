@@ -56,11 +56,7 @@ class ThemeController {
         }
         if (array_key_exists('bootstrap_darkroom_show_exif_button', $conf) && !empty($conf['bootstrap_darkroom_show_exif_button'])) {
             $this->config->show_exif_button = $conf['bootstrap_darkroom_show_exif_button'];
-        } else {
-            // Fallback
-            $this->config->show_exif_button = true;
         }
-
 
         $template->assign('theme_config', $this->config);
     }
