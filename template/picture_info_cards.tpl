@@ -222,23 +222,21 @@
         <div class="card-body">
           <h5 class="card-title">{'EXIF Metadata'|@translate}</h5>
           <div id="metadata">
-            {if is_array($metadata.0.lines) && (array_key_exists("{$exif_make}", $metadata.0.lines) || array_key_exists("{$exif_model}", $metadata.0.lines))}
             <div class="row" style="line-height: 40px">
-              <div class="col-12">
+              {if is_array($metadata.0.lines) && (array_key_exists("{$exif_make}", $metadata.0.lines) || array_key_exists("{$exif_model}", $metadata.0.lines))}
+              <div class="col-6">
                 <span class="camera-compact fa-3x mr-3" title="{$exif_make} &amp; {$exif_model}"></span>
                 {if is_array($metadata.0.lines) && (array_key_exists("{$exif_make}", $metadata.0.lines))}{$metadata.0.lines[{$exif_make}]}{/if}
                 {if is_array($metadata.0.lines) && (array_key_exists("{$exif_model}", $metadata.0.lines))}{$metadata.0.lines[{$exif_model}]}{/if}
               </div>
-            </div>
-            {/if}
-            {if is_array($metadata.0.lines) && (array_key_exists("{$exif_lens}", $metadata.0.lines))}
-            <div class="row" style="line-height: 40px">
-              <div class="col-12">
+              {/if}
+              {if is_array($metadata.0.lines) && (array_key_exists("{$exif_lens}", $metadata.0.lines))}
+              <div class="col-6">
                 <span class="camera-lens-h fa-3x mr-3" title="{$exif_lens}"></span>
                     {$metadata.0.lines[{$exif_lens}]}
               </div>
+              {/if}
             </div>
-            {/if}
             <div class="row">
               <div class="col-12{if $theme_config->fluid_width} col-xl-10{/if}">
                 <div class="row">
