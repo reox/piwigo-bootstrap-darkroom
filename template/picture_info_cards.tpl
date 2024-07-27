@@ -243,25 +243,31 @@
               <div class="col-12{if $theme_config->fluid_width} col-xl-10{/if}">
                 <div class="row">
                   {if is_array($metadata.0.lines) && (array_key_exists("{$exif_fnumber}", $metadata.0.lines))}
-                  <div class="col-6 col-sm-4">
+                  <div class="col-6 col-sm-3">
                     <span class="camera-aperture fa-2x pr-2" title="{$exif_fnumber}"></span> f/{$metadata.0.lines[{$exif_fnumber}]}
                   </div>
                   {/if}
                   {if is_array($metadata.0.lines) && (array_key_exists("{$exif_focal_length}", $metadata.0.lines))}
-                  <div class="col-6 col-sm-4">
+                  <div class="col-6 col-sm-3">
                     <span class="camera-focal-length fa-2x pr-2" title="{$exif_focal_length}"></span> {$metadata.0.lines[{$exif_focal_length}]}
                   </div>
                   {/if}
                   {if is_array($metadata.0.lines) && (array_key_exists("{$exif_exposure_time}", $metadata.0.lines))}
-                  <div class="col-6 col-sm-4">
+                  <div class="col-6 col-sm-3">
                     <span class="camera-shutter-speed fa-2x pr-2" title="{$exif_exposure_time}"></span> {$metadata.0.lines[{$exif_exposure_time}]}
                   </div>
                   {/if}
                   {if is_array($metadata.0.lines) && (array_key_exists("{$exif_iso}", $metadata.0.lines))}
-                  <div class="col-6 col-sm-4">
+                  <div class="col-6 col-sm-3">
                     <span class="camera-iso fa-2x pr-2" title="{$exif_iso}"></span> {$metadata.0.lines[{$exif_iso}]}
                   </div>
                   {/if}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12{if $theme_config->fluid_width} col-xl-10{/if}">
+                <div class="row">
                   {if is_array($metadata.0.lines) && (array_key_exists("{$exif_exposure_bias}", $metadata.0.lines))}
                   <div class="col-6 col-sm-4">
                     <span class="camera-exposure fa-2x pr-2" title="{$exif_exposure_bias}"></span> {$metadata.0.lines[{$exif_exposure_bias}]}
