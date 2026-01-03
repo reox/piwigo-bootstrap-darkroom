@@ -215,6 +215,13 @@
                         <span class="info">{'left-aligned free text for advanced descriptions'|@translate}
                     </blockquote>
                 </li>
+                <li>
+                <label class="font-checkbox">
+                   <span class="icon-check"></span>
+                   <input type="checkbox" name="thumbnail_nb_images" {if $theme_config->thumbnail_nb_images}checked="checked"{/if}>
+                   {'Display number of images in breadcrumb'|@translate}
+                </label>
+            </li>
             </ul>
         </fieldset>
         <fieldset>
@@ -396,9 +403,25 @@
         </fieldset>
       </div>
     </div>
-    <p class="formButtons">
-        <input type="submit" name="submit" value="{'Save Settings'|@translate}">
-    </p>
+    <div class="savebar-footer">
+      <div class="savebar-footer-start">
+      </div>
+      <div class="savebar-footer-end">
+
+    {if isset($save_success)}
+        <div class="savebar-footer-block">
+          <div class="badge info-message">
+            <i class="icon-ok"></i>{$save_success}
+          </div>
+        </div>
+    {/if}
+
+        <div class="savebar-footer-block">
+          <button class="buttonLike" type="submit"><i class="icon-floppy"></i> {'Save Settings'|@translate}</button>
+        </div>
+      </div>
+    </div>
+
 </form>
 {footer_script require="jquery"}
 (function(){
