@@ -221,7 +221,7 @@
                   {/if}
                   {if is_array($metadata.0.lines) && (array_key_exists("{$exif_fnumber}", $metadata.0.lines))}
                   <div class="col-6 col-sm-3">
-                    <span class="camera-aperture fa-2x pr-2" title="{$exif_fnumber}"></span> 𝑓/{$metadata.0.lines[{$exif_fnumber}]}
+                    <span class="camera-aperture fa-2x pr-2" title="{$exif_fnumber}"></span> ƒ/{$metadata.0.lines[{$exif_fnumber}]}
                   </div>
                   {/if}
                   {if is_array($metadata.0.lines) && (array_key_exists("{$exif_exposure_time}", $metadata.0.lines))}
